@@ -36,7 +36,7 @@ RUN apt-get update && \
     mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR
 
 # Download latest spotweb source
-    git clone https://github.com/Spotweb/Spotweb.git /var/www/site/spotweb && \
+    git clone https://github.com/Spotweb/Spotweb.git /var/www/spotweb && \
 
 # Remove pre-installed database
     rm -rf /var/lib/mysql/*
