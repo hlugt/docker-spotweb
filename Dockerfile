@@ -27,7 +27,7 @@ ADD ./configs/supervisord-mysqld.conf /etc/supervisor/conf.d/supervisord-mysqld.
 
 # Install packages
 RUN apt-get update && \
-    apt-get -y install apache2 php5 php5-curl php5-gd php5-gmp php5-mysql php-apc php5-mcrypt libapache2-mod-php5 git mysql-server supervisor && \
+    apt-get -y install apache2 php5 php5-curl php5-gd php5-gmp php5-mysql php-apc php5-mcrypt libapache2-mod-php5 git mysql-server supervisor pwgen && \
 
 # Enable apache mods
     a2enmod php5 && \
