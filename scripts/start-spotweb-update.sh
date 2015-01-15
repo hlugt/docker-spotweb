@@ -1,3 +1,3 @@
 #!/bin/bash
-exec crontab /cron.conf
-exec cron -f -L 15
+crontab /cron.conf
+cron -f -L 15
