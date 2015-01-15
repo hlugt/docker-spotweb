@@ -35,15 +35,15 @@ RUN apt-get update && \
 # Create apache directories
     mkdir -p $APACHE_RUN_DIR $APACHE_LOCK_DIR $APACHE_LOG_DIR
 
-# Download latest spotweb source
-    git clone https://github.com/Spotweb/Spotweb.git /var/www/spotweb && \
-
 # Remove pre-installed database
     rm -rf /var/lib/mysql/*
 
 # clean extra packages
     rm -rf /var/lib/apt/lists/* && \
     apt-get clean
+
+# Download latest spotweb source
+RUN git clone https://github.com/Spotweb/Spotweb.git /var/www/spotweb
 
 # Add volumes for MySQL 
 VOLUME  ["/etc/mysql", "/var/lib/mysql" ]
