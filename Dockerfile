@@ -43,7 +43,7 @@ RUN apt-get update && \
     apt-get clean
 
 # Download latest spotweb source
-RUN git clone https://github.com/Spotweb/Spotweb.git /var/www/spotweb
+RUN git clone https://github.com/Spotweb/Spotweb.git /var/www/site/spotweb
 
 # Add volumes for MySQL 
 VOLUME  ["/etc/mysql", "/var/lib/mysql" ]
